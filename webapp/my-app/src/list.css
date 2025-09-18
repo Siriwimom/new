@@ -1,0 +1,118 @@
+/* 🪄 Harry Potter Theme CSS */
+
+/* พื้นหลัง parchment */
+body {
+  font-family: "Cinzel Decorative", "Garamond", Georgia, serif;
+  background: #f8f1e4;
+  margin: 0;
+  padding: 0;
+  color: #2b1d0e;
+}
+
+/* กล่องค้นหา */
+.searchbox {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 253, 247, 0.85);
+  border: 2px solid #946b2d; /* Ravenclaw bronze */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(43, 29, 14, 0.15);
+}
+
+.searchbox input {
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 300px;
+  max-width: 90%;
+  border: 2px solid #7f0909; /* Gryffindor red */
+  border-radius: 10px;
+  background-color: #fffdf7;
+  transition: all 0.3s ease;
+}
+
+.searchbox input:focus {
+  border-color: #d4af37; /* Gryffindor gold */
+  outline: none;
+  box-shadow: 0 0 8px #d4af37;
+}
+
+/* รายการหนังสือ */
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* รายการแต่ละเล่ม */
+.bookItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fffdf7;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 15px 20px;
+  border: 2px solid #1a472a; /* Slytherin green */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.bookItem:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 18px #d4af37; /* Golden glow */
+}
+
+/* รูปภาพ */
+.bookImage img {
+  border-radius: 10px;
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid #ecb939; /* Hufflepuff yellow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* รายละเอียดหนังสือ */
+.bookTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7f0909; /* Gryffindor red */
+  font-family: "Cinzel Decorative", "Garamond", serif;
+  margin-top: 5px;
+}
+
+.bookAuthor {
+  font-size: 16px;
+  color: #5a4633;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.bookPrice {
+  font-size: 18px;
+  color: #2e7d32; /* green for galleons */
+  font-weight: bold;
+  margin-top: 6px;
+  background: linear-gradient(120deg, #ecb939, #fff3a0);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bookItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bookImage img {
+    max-width: 120px;
+  }
+}
